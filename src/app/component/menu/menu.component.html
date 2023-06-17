@@ -1,15 +1,15 @@
 <div id="container">
-    <div *ngIf="side === 'left'" class="indicator" >
-        <div class="slide-bar"></div>
-        <div class="slider"></div>
+    <div *ngIf="isMobile" class="indicator" >
+        <div class="slide-bar" style="height: {{items.length * 45}}px"></div>
+        <div class="slider" style="top: {{current * 45}}px"></div>
     </div>
-    <div style="margin-top: {{top}}px; text-align: {{side}}" class="content">
+    <div style="text-align: {{isMobile ? 'left' : 'right'}}" class="content">
         <p *ngFor="let item of items; let i = index" (click)="setItem(i)" class="item {{current === i && 'active'}}">
             {{item}}
         </p>
     </div>
-    <div *ngIf="side === 'right'" class="indicator" >
-        <div class="slide-bar" style="height: {{(items.length + 1) * 40 + top}}px"></div>
-        <div class="slider" style="top: {{(current * 40) + 10 + top}}px"></div>
+    <div *ngIf="!isMobile" class="indicator" >
+        <div class="slide-bar" style="height: {{(items.length + 1) * 45}}px"></div>
+        <div class="slider" style="top: {{(current * 45) + 28}}px"></div>
     </div>
 </div>

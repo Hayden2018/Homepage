@@ -1,0 +1,118 @@
+@import '../../styles.scss';
+
+.main {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.content {
+    display: inline-block;
+    width: calc(100% - 350px);
+    margin: 20px 25px;
+    vertical-align: top;
+    font-size: 20px;
+}
+
+.intro {
+    h3 {
+        color: $blueDeep;
+    }
+}
+
+.poe {
+    h3 {
+        color: $blueDeep;
+    }
+}
+
+.music-flip {
+    h3 {
+        color: $blueDeep;
+    }
+
+    img {
+        margin-right: 15px;
+        border-radius: 6px;
+        width: 260px;
+        height: auto;
+        border: 1px solid #c5c5c5;
+
+        @media only screen and (max-width: 1000px) {
+            margin-right: 12px;
+            width: 220px;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 900px) {
+            margin-right: 10px;
+            width: 200px;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 800px) {
+            margin-right: 8px;
+            width: 180px;
+            height: auto;
+        }
+    }
+}
+
+iframe {
+    border-radius: 10px;
+    width: 580px;
+    height: 330px;
+
+    @media only screen and (max-width: 960px) {
+        width: 500px;
+        height: 285px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        width: 480px;
+        height: 270px;
+    }
+}
+
+button {
+    &.blueDeep {
+        @include material-button($blueDeep, #ffffff);
+    }
+
+    &.blueLight {
+        @include material-button($blueLight, #ffffff);
+    }
+
+    &.green {
+        @include material-button($green, #ffffff);
+    }
+
+    margin: 12px 16px 12px 0px;
+
+    &.page-end {
+        margin-bottom: 30px;
+    }
+}
+
+.gallery-container {
+    column-count: 3;
+    column-gap: 0.5rem;
+    max-width: 100%;
+  
+    @media (max-width: 1080px) {
+        column-count: 2;
+    }
+}
+  
+.gallery-item {
+    display: inline-block;
+    padding: 0 0.25rem 0.5rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    break-inside: avoid;
+  
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}

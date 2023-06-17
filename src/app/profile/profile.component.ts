@@ -10,8 +10,10 @@ export class ProfileComponent {
   current: number = 0;
 
   items: Array<string> = [
-    'Test One',
-    'Test Two',
-    'Test Three',
+    'About Me',
+    'My Skills',
+    'Work Experience',
+    'Hobbies',
+    'Contact Me',
   ]
 }

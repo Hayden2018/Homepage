@@ -9,8 +9,12 @@ export class HeaderComponent {
 
   state = ['active', 'inactive']
 
-  selectTab = (index: number) => {
-    this.state = ['inactive', 'inactive']
-    this.state[index] = 'active'
+  selectTab = (index: number): void => {
+    this.state = ['inactive', 'inactive'];
+    this.state[index] = 'active';
+  }
+
+  showMenu = (): void => {
+    ;
   }
 }

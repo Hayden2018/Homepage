@@ -1,0 +1,100 @@
+<div class="main" [ngSwitch]="current">
+    <app-menu [items]="items" [current]="current" (changeEvent)="current = $event"></app-menu>
+    <div class="content intro" *ngSwitchCase="0">
+        <h2>My Works</h2>
+        
+        <h3>Software Projects</h3>
+        <p>
+            As a technology enthusiast who is passionate about leveraging technology to solve everyday problems.
+            I have developed various software tools for the problems I have encountered.
+        </p>
+        <h4>Poe.com Resizer - Chrome Extension</h4>
+        <p>
+            Poe.com Resizer is a handy Chrome extension that allows users to interactively resize the chat area on <a href="https://poe.com" target="_blank">poe.com</a>.
+            This extension is available for download on the <a href="https://chrome.google.com/webstore/detail/poecom-resizer/pkkdjnobfambcickbmbmpgejnelalmjo" target="_blank">Chrome Web Store</a> and the source code can be found on <a href="https://github.com/Hayden2018/poe-com-resizer" target="_blank">GitHub</a>.
+        </p>
+        <h4>Music Flip - Android App</h4>
+        <p>
+            Music Flip is an innovative Android app designed to help musicians flip PDF sheet music pages using simple head gestures, such as nodding or winking.
+            You can download it on <a href="https://play.google.com/store/apps/details?id=com.haydern.musicflip.examples.main" target="_blank">Play Store</a> and the source code can be found on <a href="https://github.com/Hayden2018/Music-Filp" target="_blank">GitHub</a>.
+        </p>
+      
+        <h3>Articles</h3>
+        <h4>Introduction to Stoicism with Modern Applications</h4>
+        <p>
+            This arcticle delved into the timeless wisdom of Stoicism and its relevance to modern life.
+            Drawing on the teachings of ancient philosophers like Seneca and Epictetus, the piece explores the core principles of Stoicism and provides practical tips for applying these ideas in our everyday lives.   
+        </p>
+
+        <h3>Photos</h3>
+        <p>
+            I have always been fascinated by the beauty of the world around me and enjoy capturing the nicer moments on my phone.
+            These photos are a collection of random encounters in my life, not deliberate attempts to create art but genuine glimpses into the world as I experience it.
+            I invite you to explore my photo gallery and share in the wonder of these everyday moments.
+        </p>
+        <button class="blueDeep page-end" (click)="current = 4">
+            View My Gallery ▶
+        </button>
+    </div>
+    <div class="content poe" *ngSwitchCase="1">
+        <h2>Poe.com Resizer</h2>
+        <p>
+            I created <strong>Poe.com Resizer</strong> after finding the chat area of <a href="https://poe.com" target="_blank">poe.com</a> could use some layout improvements on its desktop website.
+            Designed for the AI chatbot platform <a href="https://poe.com" target="_blank">poe.com</a>, it works as a handy Chrome extension allowing users to interactively resize the chat area on the webiste.
+        </p>
+        <button class="blueLight" (click)="open('https://chrome.google.com/webstore/detail/poecom-resizer/pkkdjnobfambcickbmbmpgejnelalmjo')">
+            Download on Chrome Store ▶
+        </button>
+        <button class="blueDeep" (click)="open('https://github.com/Hayden2018/poe-com-resizer')">
+            View GitHub Repo ▶
+        </button>
+        <h3>
+            Demo Video
+        </h3>
+        <iframe src="https://www.youtube.com/embed/Kub4ABrePYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="content music-flip" *ngSwitchCase="2">      
+        <h2>Music Flip</h2>
+        <p>
+            Recognizing the challenges piano players face when trying to turn sheet music pages during a performance, I created <strong>Music Flip</strong> - an innovative Android app designed to help musicians flip PDF sheet music pages using simple head gestures, such as nodding or winking.
+            This app provides a hands-free solution to a common problem, allowing musicians to focus on their performance.
+        </p>
+        <button class="blueLight" (click)="open('https://play.google.com/store/apps/details?id=com.haydern.musicflip.examples.main')">
+            Download on Play Store ▶
+        </button>
+        <button class="blueDeep" (click)="open('https://github.com/Hayden2018/Music-Filp')">
+            View GitHub Repo ▶
+        </button>
+        <h3>Screenshots</h3>
+        <p>
+            <img src="/assets/img/capture1.webp">
+            <img src="/assets/img/capture2.webp">
+        </p>
+    </div>
+    <div class="content" *ngSwitchCase="3">      
+        <h3>Articles</h3>
+        <p>
+            Being a lover of philosophy, I have written an arcticle summarizing major teachings of Stoicism as I explore the philosophy myself.
+            I found it to be pretty helpful in various situations in life, and in this work I explored some applications of Stocism that maybe helpful in the modern world.
+        </p>
+        <h4>Introduction to Stoicism with Modern Applications</h4>
+        <p>
+            This arcticle delved into the timeless wisdom of Stoicism and its relevance to modern life.
+            Drawing on the teachings of ancient philosophers like Seneca and Epictetus, the piece explores the core principles of Stoicism and provides practical tips for applying these ideas in our everyday lives.   
+        </p>
+        <button class="blueDeep page-end" (click)="download('/assets/doc/Intro-to-Stoicism-for-Modern-Day-Life.pdf')">
+            View PDF Version ▶
+        </button>
+    </div>
+    <div class="content" *ngSwitchCase="4">      
+        <h3>Photos</h3>
+        <p>
+            I invite you to explore my photo gallery and share in the wonder of these everyday moments.
+        </p>
+        <div class="gallery-container">
+            <div *ngFor="let image of images" class="gallery-item">
+                <img [src]="'assets/img/' + image">
+            </div>
+        </div>
+    </div>
+</div>

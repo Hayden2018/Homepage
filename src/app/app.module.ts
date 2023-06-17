@@ -5,20 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ArticleComponent } from './article/article.component';
+import { WorksComponent } from './works/works.component';
 import { MenuComponent } from './component/menu/menu.component';
+import { BannerComponent } from './component/banner/banner.component';
+
+import { StoreModule } from '@ngrx/store';
+import { menuReducer } from './store/store.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ProfileComponent,
-    ArticleComponent,
-    MenuComponent
+    WorksComponent,
+    MenuComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // StoreModule.forRoot({ menu: menuReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent]

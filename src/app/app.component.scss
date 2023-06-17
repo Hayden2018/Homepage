@@ -1,2 +1,16 @@
-$green: #92d400;
-$dark: #22202A;
+@import "../styles.scss";
+
+
+#container {
+    @include mobile-content {
+        position: fixed;
+        height: 100%;
+    }
+}
+
+#scrollable-container {
+    @include mobile-content {
+        overflow: auto;
+        height: calc(100% - 50px);
+    }
+}

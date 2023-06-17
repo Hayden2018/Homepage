@@ -1,9 +1,113 @@
-<div id="banner" src="/assets/img/earth-banner.jpg">
-    <div class="greet">Hello. My name is Hayden. Nice to meet you.</div>
-    <div class="content">
-        <img src="/assets/img/portrait.jpg"/>
+<div class="main" [ngSwitch]="current">
+    <app-menu [items]="items" [current]="current" (changeEvent)="current = $event"></app-menu>
+    <div class="content" *ngSwitchCase="0">
+        <h2>About Me</h2>
+        <p>
+            Hi there! My name is Hayden, I am a web developer at YOHO, an e-commerce company based in Hong Kong. 
+            With over two years of experience in software engineering, my journey in the tech industry has been filled with exciting challenges and continuous growth.
+        </p>
+        <p>
+            I hold a Bachelor and Master of Big Data Science from the Hong Kong University of Science and Technology (HKUST), where I honed my skills and developed a passion for solving problems with technology. 
+            In my current role at YOHO, I have the opportunity to work on features and improvements for one of the most popular e-commerce site in Hong Kong. 
+            Additionally, I have successfully delivered an HR workflow project using ServiceNow in my previous job.
+        </p>
+        <p>
+            When I am not immersed in the world of web development, I enjoy playing the piano, especially the timeless compositions of Mozart.
+            I am also a Go enthusiast, holding the rank of amateur one dan. My interest in machine learning was sparked after learning about AlphaGo, and this has led me to explore the field as a hobbyist.
+        </p>
+        <p>
+            I have created a few open-source projects to solve the problems that I encounter in my daily life, and you can find links to them on this website. 
+            I am always eager to use technology to solve real-life problems. If you have any interesting project ideas or would like to collaborate, please feel free to <a href="mailto:yikhei123@gmail.com">contact me</a>.
+        </p>
     </div>
-</div>
-<div class="content">
-    <app-menu [items]="items" [side]="'right'" [top]="20" (changeEvent)="current = $event"></app-menu>
+    <div class="content skill" *ngSwitchCase="1">
+        <h2>My Skills</h2>
+        <ul>
+            <li>
+              <strong>Web Development</strong><br> Over 2 years of experience in web development, focusing on websites for E-commerce. Proficient in React (Next.js), Redux, Node.js (Express), MySQL, as well as the Angular framework which this site is based on.
+            </li>
+            <li>
+              <strong>ServiceNow</strong><br> Experience in working on an HR workflow project using ServiceNow.
+            </li>
+            <li>
+              <strong>Python Programming</strong><br> Skilled in Python for machine learning, utilizing libraries like PyTorch and scikit-learn for both hobby and academic purposes.
+            </li>
+            <li>
+              <strong>Android Development</strong><br> Familiar with Android development using Java, having worked on hobby projects.
+            </li>
+            <li>
+              <strong>Chrome Extension Development</strong><br> Experience in developing Chrome extensions as hobby projects.
+            </li>
+            <li>
+              <strong>AI Enthusiast</strong><br> Experienced user of ChatGPT and passionate about artificial intelligence.
+            </li>
+            <li>
+              <strong>Tech-savvy Problem Solver</strong><br> Keen on exploring and mastering new technologies to effectively tackle challenges and drive innovation.
+            </li>
+        </ul>
+    </div>
+    <div class="content" *ngSwitchCase="2">
+        <h2>Work Experience</h2>
+        <div class="job">
+            <h3>Analyst</h3>
+            <h4>Deloitte Digital</h4>
+            <p class="duration">July 2021 - April 2023</p>
+            <p>
+                At the digital consulting practice, I serve as technical consultant for ServiceNow projects mainly focusing on HR workflows.
+                I collaborated with multitple stakeholders to deliver streamlined solutions for clients.
+            </p>
+        </div>
+        <div class="job">
+            <h3>Web Developer</h3>
+            <h4>Yoho Hong Kong</h4>
+            <p class="duration">April 2023 - Present</p>
+            <p>
+                I lead the maintenance and enhancement of the merchant console, which enables third-party sellers to showcase their products on our platform.
+                Technology I utilize on a daily basis includes React, Node, and MySQL.
+            </p>
+        </div>
+    </div>
+    <div class="content hobby" *ngSwitchCase="3">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>
+              <div>
+                <strong>Piano</strong><br>
+                I am a passionate pianist who enjoys practicing and playing the works of my favorite composer, Mozart. Although I am not a master, I am constantly honing my skills to improve my performance.
+              </div>
+              <img src="/assets/img/piano.jpg" height="180px" width="270px">
+            </li>
+            <li>
+              <img src="/assets/img/go.jpg" height="180px" width="270px">
+              <div>
+                <strong>Go</strong><br>
+                As an skilled amateur player, I enjoy the ancient strategy board game of Go, which challenges my critical thinking and tactical skills.
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Machine Learning</strong><br>
+                Inspired by the achievements of AlphaGo, I delved into the world of machine learning as a hobby. This field combines computer science, data analysis, and artificial intelligence to create systems that can learn and adapt without explicit programming.
+              </div>
+              <img src="/assets/img/machine-learning.jpg" height="180px" width="270px">
+            </li>
+          </ul>
+    </div>
+    <div class="content contact" *ngSwitchCase="4">
+        <h2>Contact Me</h2>
+        <ul>
+            <li>
+                <strong>Email - </strong>
+                <a href="mailto:yikhei123@gmail.com">yikhei123@gmail.com</a>
+            </li>
+            <li>
+                <strong>LinkedIn - </strong>
+                <a href="https://www.linkedin.com/in/hayden-chiu-163626172/" target="_blank">view profile</a>
+            </li>
+            <li>
+                <strong>GitHub - </strong>
+                <a href="https://github.com/Hayden2018" target="_blank">view profile</a>
+            </li>
+        </ul>
+    </div>
 </div>
