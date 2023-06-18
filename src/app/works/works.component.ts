@@ -26,7 +26,7 @@ export class WorksComponent {
     'Photo Gallery',
   ];
 
-  images: Array<string> = generateImageNames(10);
+  images: Array<string> = generateImageNames(11);
 
   open = (url: string) => window.open(url);
 

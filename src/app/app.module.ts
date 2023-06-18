@@ -10,7 +10,7 @@ import { MenuComponent } from './component/menu/menu.component';
 import { BannerComponent } from './component/banner/banner.component';
 
 import { StoreModule } from '@ngrx/store';
-import { menuReducer } from './store/store.reducer';
+import { menuReducer, screenReducer } from './store/store.reducer';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,10 @@ import { menuReducer } from './store/store.reducer';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // StoreModule.forRoot({ menu: menuReducer }),
+    StoreModule.forRoot({
+      menu: menuReducer,
+      screen: screenReducer,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

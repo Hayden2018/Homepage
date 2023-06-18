@@ -14,7 +14,12 @@
     }
 
     @include mobile-content {
-        height: 25vw;
+        height: 22vw;
+        margin-bottom: 10vw;
+        position: sticky;
+        z-index: 10;
+        top: 0;
+        box-shadow: 0 0vw 6vw 14vw #ffffff;
     }
 
     img {
@@ -32,7 +37,8 @@
         @include mobile-content {
             height: 28vw;
             width: 28vw;
-            margin: 8vw 36vw 0;
+            margin: 5vw 36vw 0;
+            box-shadow: 0px 6px 6px #ACACAC;
         }
     }
 }

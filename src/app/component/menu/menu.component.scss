@@ -1,11 +1,11 @@
-@import '../../../styles.scss';
+@import 'src/styles.scss';
 
 #container {
     display: inline-block;
     width: 250px;
 
     @include mobile-content {
-        z-index: 100;
+        z-index: 5;
         position: absolute;
         width: calc(100vw - 30px);
         max-width: 350px;
@@ -15,6 +15,8 @@
         left: max(15px, 50vw - 180px);
         box-shadow: 0 0 6px 0 #686868;
         padding: 15px 5px;
+
+        transition: transform 0.2s;
     }
 }
 
