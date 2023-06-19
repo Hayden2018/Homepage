@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies and build
       run: |
         npm ci
-        npm run build -- --prod
+        ng build --prod
 
     - name: Install AWS CLI
       run: |
