@@ -34,4 +34,4 @@ jobs:
 
     - name: Deploy to S3
       run: |
-        aws s3 sync dist/homepage/ s3://hayden-homepage --delete
+        aws s3 sync dist/homepage/ s3://hayden-homepage --delete --acl public-read
