@@ -23,8 +23,11 @@ export class HeaderComponent implements OnInit {
     if (window.location.pathname.includes('/profile')) {
       this.state[0] = 'active';
     }
-    if (window.location.pathname.includes('/work')) {
+    else if (window.location.pathname.includes('/work')) {
       this.state[1] = 'active';
+    }
+    else {
+      this.state[0] = 'active';
     }
   }
 
