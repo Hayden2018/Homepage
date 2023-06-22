@@ -2,10 +2,6 @@
     <div class="menu-item {{state[0]}}" (click)="selectTab(0)">
         <div routerLink="/profile" class="menu-text">About Me</div>
         <div class="indicator"></div>
-    </div>
-    <div class="menu-item {{state[1]}}" (click)="selectTab(1)">
-        <div routerLink="/works" class="menu-text">My Works</div>
-        <div class="indicator"></div>
     </div> 
     <div (click)="toggleMenu()" *ngIf="isMobile">
         <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
@@ -14,5 +10,8 @@
             <rect x="12" y="32" width="26" height="4" rx="2" ry="2" fill="white" />
         </svg>
     </div>
-    
+    <div class="menu-item {{state[1]}}" (click)="selectTab(1)">
+        <div routerLink="/works" class="menu-text">My Works</div>
+        <div class="indicator"></div>
+    </div>
 </div>

@@ -87,6 +87,20 @@
                     margin-top: 20px;
                     margin-bottom: 20px;
                 }
+
+                @include mobile-content {
+                    width: 150px;
+                    height: 100px;
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                }
+
+                @media only screen and (max-width: 400px) {
+                    width: 135px;
+                    height: 90px;
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                }
             }
         
             div {
