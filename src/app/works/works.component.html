@@ -4,9 +4,10 @@
         <h2>My Works</h2>
         
         <h3>Software Projects</h3>
+        <h4>Dialogcraft - Electron Desktop App</h4>
         <p>
-            As a technology enthusiast who is passionate about leveraging technology to solve everyday problems.
-            I have developed various software tools for the problems I have encountered.
+            Dialogcraft is an OpenAI API client for desktop. With rich features it gives you full control over your chats with AI.
+            You can download the app from the <a href="https://github.com/Hayden2018/dialogcraft/releases" target="_blank">release page</a> on GitHub or try it out with <a href="https://dialogcraft.hayden.life" target="_blank">web demo</a>.
         </p>
         <h4>Poe.com Resizer - Chrome Extension</h4>
         <p>
@@ -36,7 +37,26 @@
             View My Gallery ▶
         </button>
     </div>
-    <div class="content poe" *ngSwitchCase="1">
+    <div class="content dialogcraft" *ngSwitchCase="1">      
+        <h2>Dialogcraft</h2>
+        <p>
+            As an AI enthusiast, I would like to have maximum control over my interactions with AI like ChatGPT.
+            Therefore I developed <strong>Dialogcraft</strong> - a feature-rich desktop app that directly interfaces with OpenAI API.
+            This app offers complete control over the model parameters for each conversation and comprehensive history editing ability.
+            Additional features such as text streaming and automatic conversation naming further enhance the user experience.
+        </p>
+        <button class="blueLight" (click)="open('https://github.com/Hayden2018/dialogcraft/releases')">
+            Download Releases ▶
+        </button>
+        <button class="blueDeep" (click)="open('https://github.com/Hayden2018/dialogcraft')">
+            View GitHub Repo ▶
+        </button>
+        <h3>Screenshots</h3>
+        <p>
+            <img src="/assets/img/dialogcraft.png">
+        </p>
+    </div>
+    <div class="content poe" *ngSwitchCase="2">
         <h2>Poe.com Resizer</h2>
         <p>
             I created <strong>Poe.com Resizer</strong> after finding the chat area of <a href="https://poe.com" target="_blank">poe.com</a> could use some layout improvements on its desktop website.
@@ -53,7 +73,7 @@
         </h3>
         <iframe src="https://www.youtube.com/embed/Kub4ABrePYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <div class="content music-flip" *ngSwitchCase="2">      
+    <div class="content music-flip" *ngSwitchCase="3">      
         <h2>Music Flip</h2>
         <p>
             Recognizing the challenges piano players face when trying to turn sheet music pages during a performance, I created <strong>Music Flip</strong> - an innovative Android app designed to help musicians flip PDF sheet music pages using simple head gestures, such as nodding or winking.
@@ -71,7 +91,7 @@
             <img src="/assets/img/capture2.webp">
         </p>
     </div>
-    <div class="content" *ngSwitchCase="3">      
+    <div class="content" *ngSwitchCase="4">      
         <h3>Articles</h3>
         <p>
             Being a lover of philosophy, I have written an arcticle summarizing major teachings of Stoicism as I explore the philosophy myself.
@@ -86,7 +106,7 @@
             View PDF Version ▶
         </button>
     </div>
-    <div class="content" *ngSwitchCase="4">      
+    <div class="content" *ngSwitchCase="5">      
         <h3>Photos</h3>
         <p>
             I invite you to explore my photo gallery and share in the wonder of these everyday moments.

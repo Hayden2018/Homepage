@@ -25,6 +25,39 @@
     }
 }
 
+.dialogcraft {
+    h3 {
+        color: $blueDeep;
+    }
+
+    img {
+        margin-right: 15px;
+        border-radius: 6px;
+        width: 460px;
+        height: auto;
+        border: 1px solid #c5c5c5;
+
+        @media only screen and (max-width: 1000px) {
+            margin-right: 12px;
+            width: 420px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            margin-right: 10px;
+            width: 380px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            margin-right: 8px;
+            width: 360px;
+        }
+
+        @include mobile-content {
+            width: 70vw;
+        }
+    }
+}
+
 .poe {
     h3 {
         color: $blueDeep;

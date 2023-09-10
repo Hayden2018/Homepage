@@ -20,6 +20,7 @@ export class WorksComponent {
 
   items: Array<string> = [
     'Overview',
+    'Dialogcraft',
     'Poe.com Resizer',
     'Music Flip',
     'Arcticles',
