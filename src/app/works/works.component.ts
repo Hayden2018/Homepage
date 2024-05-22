@@ -23,7 +23,7 @@ export class WorksComponent {
     'Dialogcraft',
     'Poe.com Resizer',
     'Music Flip',
-    'Arcticles',
+    'Book Summary',
     'Photo Gallery',
   ];
 
