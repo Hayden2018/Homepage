@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
-  current: number = 0;
+  currentSection: number = 0;
 
   items: Array<string> = [
     'About Me',
